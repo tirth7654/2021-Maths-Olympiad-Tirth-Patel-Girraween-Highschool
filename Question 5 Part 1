@@ -1,0 +1,9 @@
+x, y, num = int(input("1st num : ")), int(input("2nd num : ")), int(input("nTh num : "))
+DiginacciNumbers = [x, y]
+for i in range(2, num):
+    aSum, bSum = 0, 0
+    for d in str(DiginacciNumbers[i - 2]): aSum += int(d)
+    for d in str(DiginacciNumbers[i - 1]): bSum += int(d)
+    DiginacciNumbers.append(aSum + bSum)
+print(DiginacciNumbers)
+print("The " + str(num) + "th digit is " + str(DiginacciNumbers[num - 1]))
